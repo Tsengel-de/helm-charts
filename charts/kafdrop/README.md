@@ -12,7 +12,7 @@ More details on this helm chart: https://github.com/obsidiandynamics/kafdrop/tre
 Add Helm repository
 
 ```shell
-helm repo add ricsanfre https://ricsanfre.github.io/helm-charts
+helm repo add tsengel https://Tsengel-de.github.io/helm-charts
 ```
 
 Update helm repo
@@ -23,7 +23,7 @@ helm repo update
 
 Install the chart:
 ```sh
-helm upgrade -i kafdrop ricsanfre/kafdrop --set image.tag=3.x.x \
+helm upgrade -i kafdrop tsengel/kafdrop --set image.tag=3.x.x \
     --set kafka.brokerConnect=<host:port,host:port> \
     --set server.servlet.contextPath="/" \
     --set cmdArgs="--message.format=AVRO --schemaregistry.connect=http://localhost:8080" \ #optional
@@ -49,7 +49,7 @@ To install with protobuf support, a "facility" option is provided for the deploy
 Example:
 
 ```sh
-helm upgrade -i kafdrop ricsanfre/kafdrop --set image.tag=3.x.x \
+helm upgrade -i kafdrop tsengel/kafdrop --set image.tag=3.x.x \
     --set kafka.brokerConnect=<host:port,host:port> \
     --set server.servlet.contextPath="/" \
     --set mountProtoDesc.enabled=true \
